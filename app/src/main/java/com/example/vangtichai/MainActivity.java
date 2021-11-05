@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewVal, textView1, textView2, textView5, textView10,
             textView20, textView50, textView100, textView500;
 
-    private String currentVal;
+    private String currentVal = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,79 +25,55 @@ public class MainActivity extends AppCompatActivity {
         setEntities();
 
         btn1.setOnClickListener(v -> {
-            currentVal = currentVal.concat("1");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("1");
         });
         btn2.setOnClickListener(v -> {
-            currentVal = currentVal.concat("2");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("2");
+
         });
         btn3.setOnClickListener(v -> {
-            currentVal = currentVal.concat("3");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("3");
+
         });
         btn4.setOnClickListener(v -> {
-            currentVal = currentVal.concat("4");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("4");
+
         });
         btn5.setOnClickListener(v -> {
-            currentVal = currentVal.concat("5");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("5");
+
         });
         btn6.setOnClickListener(v -> {
-            currentVal = currentVal.concat("6");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("6");
+
         });
         btn7.setOnClickListener(v -> {
-            currentVal = currentVal.concat("7");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("7");
+
         });
         btn8.setOnClickListener(v -> {
-            currentVal = currentVal.concat("8");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("8");
+
         });
         btn9.setOnClickListener(v -> {
-            currentVal = currentVal.concat("9");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("9");
+
         });
         btn0.setOnClickListener(v -> {
-            currentVal = currentVal.concat("0");
-            this.textViewVal.setText(currentVal);
-            calculateChange();
+            addNumber("0");
+
         });
         btnClr.setOnClickListener(v -> {
             currentVal = "";
-            this.textViewVal.setText(currentVal);
+            this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
             reset();
         });
     }
 
-    private void setEntities() {
-        currentVal = "";
-
-        this.btn0 = findViewById(R.id.btn0); this.btn1 = findViewById(R.id.btn1);
-        this.btn2 = findViewById(R.id.btn2); this.btn3 = findViewById(R.id.btn3);
-        this.btn4 = findViewById(R.id.btn4); this.btn5 = findViewById(R.id.btn5);
-        this.btn6 = findViewById(R.id.btn6); this.btn7 = findViewById(R.id.btn7);
-        this.btn8 = findViewById(R.id.btn8); this.btn9 = findViewById(R.id.btn9);
-        this.btnClr = findViewById(R.id.btnClr);
-
-        this.textViewVal = findViewById(R.id.textVal); this.textView1 = findViewById(R.id.text1);
-        this.textView2 = findViewById(R.id.text2); this.textView5 = findViewById(R.id.text5);
-        this.textView10 = findViewById(R.id.text10); this.textView20 = findViewById(R.id.text20);
-        this.textView50 = findViewById(R.id.text50); this.textView100 = findViewById(R.id.text100);
-        this.textView500 = findViewById(R.id.text500);
-
-        this.textViewVal.setText(currentVal);
+    private void addNumber(String number) {
+        currentVal = currentVal.concat(number);
+        this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
+        calculateChange();
     }
 
     private void calculateChange() {
@@ -132,6 +108,25 @@ public class MainActivity extends AppCompatActivity {
         textView1.setText(String.format(Locale.ENGLISH,"%s%d",
                 getText(R.string._1tk).toString(), amount));
 
+    }
+
+    private void setEntities() {
+        currentVal = "";
+
+        this.btn0 = findViewById(R.id.btn0); this.btn1 = findViewById(R.id.btn1);
+        this.btn2 = findViewById(R.id.btn2); this.btn3 = findViewById(R.id.btn3);
+        this.btn4 = findViewById(R.id.btn4); this.btn5 = findViewById(R.id.btn5);
+        this.btn6 = findViewById(R.id.btn6); this.btn7 = findViewById(R.id.btn7);
+        this.btn8 = findViewById(R.id.btn8); this.btn9 = findViewById(R.id.btn9);
+        this.btnClr = findViewById(R.id.btnClr);
+
+        this.textViewVal = findViewById(R.id.text); this.textView1 = findViewById(R.id.text1);
+        this.textView2 = findViewById(R.id.text2); this.textView5 = findViewById(R.id.text5);
+        this.textView10 = findViewById(R.id.text10); this.textView20 = findViewById(R.id.text20);
+        this.textView50 = findViewById(R.id.text50); this.textView100 = findViewById(R.id.text100);
+        this.textView500 = findViewById(R.id.text500);
+
+        this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
     }
 
     private void reset() {
