@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
@@ -14,60 +15,43 @@ public class MainActivity extends AppCompatActivity {
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnClr;
     private TextView textViewVal, textView1, textView2, textView5, textView10,
             textView20, textView50, textView100, textView500;
-
-    private String currentVal = "";
+    private String currentVal;
+    private static final String STATE_VAL = "currentVal";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         setEntities();
 
-        btn1.setOnClickListener(v -> {
-            addNumber("1");
-        });
-        btn2.setOnClickListener(v -> {
-            addNumber("2");
+        if (savedInstanceState != null) {
+            String savedVal = savedInstanceState.getString(STATE_VAL);
+            currentVal = savedVal;
+            calculateChange();
+            textViewVal.setText(getString(R.string.tktext).concat(savedVal));
+        }
 
-        });
-        btn3.setOnClickListener(v -> {
-            addNumber("3");
-
-        });
-        btn4.setOnClickListener(v -> {
-            addNumber("4");
-
-        });
-        btn5.setOnClickListener(v -> {
-            addNumber("5");
-
-        });
-        btn6.setOnClickListener(v -> {
-            addNumber("6");
-
-        });
-        btn7.setOnClickListener(v -> {
-            addNumber("7");
-
-        });
-        btn8.setOnClickListener(v -> {
-            addNumber("8");
-
-        });
-        btn9.setOnClickListener(v -> {
-            addNumber("9");
-
-        });
-        btn0.setOnClickListener(v -> {
-            addNumber("0");
-
-        });
+        btn1.setOnClickListener(v -> addNumber("1"));
+        btn2.setOnClickListener(v -> addNumber("2"));
+        btn3.setOnClickListener(v -> addNumber("3"));
+        btn4.setOnClickListener(v -> addNumber("4"));
+        btn5.setOnClickListener(v -> addNumber("5"));
+        btn6.setOnClickListener(v -> addNumber("6"));
+        btn7.setOnClickListener(v -> addNumber("7"));
+        btn8.setOnClickListener(v -> addNumber("8"));
+        btn9.setOnClickListener(v -> addNumber("9"));
+        btn0.setOnClickListener(v -> addNumber("0"));
         btnClr.setOnClickListener(v -> {
             currentVal = "";
             this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
             reset();
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
+        savedInstanceState.putString(STATE_VAL, currentVal);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     private void addNumber(String number) {
@@ -139,8 +123,5 @@ public class MainActivity extends AppCompatActivity {
         textView5.setText(getText(R.string._5tk).toString());
         textView2.setText(getText(R.string._2tk).toString());
         textView1.setText(getText(R.string._1tk).toString());
-
     }
-
-
 }
