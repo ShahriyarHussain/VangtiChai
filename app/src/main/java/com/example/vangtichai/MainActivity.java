@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),
                     "Number Limit Reached", Toast.LENGTH_SHORT).show();
             textViewVal.setBackgroundColor(getResources().getColor(R.color.red));
+            textViewVal.setTextColor(getResources().getColor(R.color.white));
             return;
         }
         int amount = Integer.parseInt(currentVal);
@@ -115,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void reset() {
         textViewVal.setBackgroundColor(getResources().getColor(R.color.white));
+        textViewVal.setTextColor(getResources().getColor(R.color.dark_300));
         textView500.setText(getText(R.string._500tk).toString());
         textView100.setText(getText(R.string._100tk).toString());
         textView50.setText(getText(R.string._50tk).toString());

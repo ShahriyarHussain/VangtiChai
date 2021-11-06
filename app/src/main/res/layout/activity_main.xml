@@ -8,201 +8,229 @@
 
     <Button
         android:id="@+id/btn5"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_5"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn8"
         app:layout_constraintEnd_toStartOf="@+id/btn6" />
 
     <Button
         android:id="@+id/btn6"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_6"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn9"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_2"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn5"
         app:layout_constraintEnd_toStartOf="@+id/btn3" />
 
     <Button
         android:id="@+id/btnClr"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="38dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/lastBtnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/clear"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn0" />
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_3"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn6"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn0"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="38dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/lastBtnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_0"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn8"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="14dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_8"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btnClr"
         app:layout_constraintEnd_toStartOf="@+id/btn9" />
 
     <Button
         android:id="@+id/btn7"
-        android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="14dp"
+        android:layout_width="@dimen/parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_7"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btnClr"
         app:layout_constraintEnd_toStartOf="@+id/btn8" />
 
     <Button
         android:id="@+id/btn9"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_9"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn0"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn4"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_4"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn7"
         app:layout_constraintEnd_toStartOf="@+id/btn5" />
 
     <Button
         android:id="@+id/btn1"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginEnd="@dimen/btnMarginEnd"
+        android:layout_marginBottom="@dimen/btnMarginBottom"
         android:backgroundTint="@color/yellow_200"
         android:textColor="@color/dark_200"
         android:text="@string/_1"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn4"
         app:layout_constraintEnd_toStartOf="@+id/btn2" />
-
-    <TextView
-        android:id="@+id/text100"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/dark_300"
-        android:text="@string/_100tk"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text500" />
-
-    <TextView
-        android:id="@+id/text20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/dark_300"
-        android:text="@string/_20tk"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text50" />
-
-    <TextView
-        android:id="@+id/text5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="34dp"
-        android:textColor="@color/dark_300"
-        android:text="@string/_5tk"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text10" />
 
     <TextView
         android:id="@+id/text500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/firstTxtMarginTop"
         android:textColor="@color/dark_300"
         android:text="@string/_500tk"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
+        android:textColor="@color/dark_300"
+        android:text="@string/_100tk"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text500" />
+
+    <TextView
+        android:id="@+id/text50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
+        android:textColor="@color/dark_300"
+        android:text="@string/_50tk"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text100" />
+
+
+    <TextView
+        android:id="@+id/text20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
+        android:textColor="@color/dark_300"
+        android:text="@string/_20tk"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text50" />
+
+    <TextView
+        android:id="@+id/text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
+        android:textColor="@color/dark_300"
+        android:text="@string/_10tk"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text20" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
+        android:textColor="@color/dark_300"
+        android:text="@string/_5tk"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text10" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
         android:textColor="@color/dark_300"
         android:text="@string/_2tk"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text5" />
 
@@ -210,47 +238,23 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="@dimen/txtViewMarginLeft"
+        android:layout_marginTop="@dimen/txtTopMargin"
         android:textColor="@color/dark_300"
         android:text="@string/_1tk"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
-
-    <TextView
-        android:id="@+id/text50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:textColor="@color/dark_300"
-        android:text="@string/_50tk"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text100" />
-
-    <TextView
-        android:id="@+id/text10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/dark_300"
-        android:text="@string/_10tk"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text20" />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/centerTxtLeftMargin"
+        android:layout_marginTop="@dimen/centerTextTopMargin"
         android:textColor="@color/dark_300"
         android:text="@string/taka"
-        android:textSize="20sp"
+        android:textSize="@dimen/txtSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
