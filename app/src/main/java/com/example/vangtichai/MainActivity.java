@@ -1,6 +1,8 @@
 package com.example.vangtichai;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
             textView20, textView50, textView100, textView500;
     private String currentVal;
     private static final String STATE_VAL = "currentVal";
+    private int tapCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,21 +33,17 @@ public class MainActivity extends AppCompatActivity {
             textViewVal.setText(getString(R.string.tktext).concat(currentVal));
         }
 
-        btn1.setOnClickListener(v -> addNumber("1"));
-        btn2.setOnClickListener(v -> addNumber("2"));
-        btn3.setOnClickListener(v -> addNumber("3"));
-        btn4.setOnClickListener(v -> addNumber("4"));
-        btn5.setOnClickListener(v -> addNumber("5"));
-        btn6.setOnClickListener(v -> addNumber("6"));
-        btn7.setOnClickListener(v -> addNumber("7"));
-        btn8.setOnClickListener(v -> addNumber("8"));
-        btn9.setOnClickListener(v -> addNumber("9"));
-        btn0.setOnClickListener(v -> addNumber("0"));
-        btnClr.setOnClickListener(v -> {
-            currentVal = "";
-            this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
-            reset();
-        });
+        btn1.setOnClickListener(this::addNumber);
+        btn2.setOnClickListener(this::addNumber);
+        btn3.setOnClickListener(this::addNumber);
+        btn4.setOnClickListener(this::addNumber);
+        btn5.setOnClickListener(this::addNumber);
+        btn6.setOnClickListener(this::addNumber);
+        btn7.setOnClickListener(this::addNumber);
+        btn8.setOnClickListener(this::addNumber);
+        btn9.setOnClickListener(this::addNumber);
+        btn0.setOnClickListener(this::addNumber);
+        btnClr.setOnClickListener(this::addNumber);
     }
 
     @Override
@@ -53,21 +52,32 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
     }
 
-    private void addNumber(String number) {
-        if (number.equals("0") && currentVal.length() == 0) return;
+    private void addNumber(View view) {
+        String number = ((Button)view).getText().toString();
+        if (number.equals("CLEAR")) {
+            tapCounter = 0;
+            currentVal = "";
+            reset();
+            return;
+        }
+        if (currentVal.length() > 8) {
+            if (tapCounter % 10 == 0) {
+                Toast.makeText(getApplicationContext(),
+                    "Number Limit Reached", Toast.LENGTH_SHORT).show();
+            }
+            textViewVal.setBackgroundColor(getResources().getColor(R.color.red));
+            textViewVal.setTextColor(getResources().getColor(R.color.white));
+            tapCounter++;
+            return;
+        }
+        if (currentVal.equals("0")) currentVal = "";
+
         currentVal = currentVal.concat(number);
         this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
         calculateChange();
     }
 
     private void calculateChange() {
-        if (currentVal.length() > 9) {
-            Toast.makeText(getApplicationContext(),
-                    "Number Limit Reached", Toast.LENGTH_SHORT).show();
-            textViewVal.setBackgroundColor(getResources().getColor(R.color.red));
-            textViewVal.setTextColor(getResources().getColor(R.color.white));
-            return;
-        }
         int amount = Integer.parseInt(currentVal);
         textView500.setText(String.format(Locale.ENGLISH,"%s%d",
                 getText(R.string._500tk).toString(), amount / 500));
@@ -117,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
     private void reset() {
         textViewVal.setBackgroundColor(getResources().getColor(R.color.white));
         textViewVal.setTextColor(getResources().getColor(R.color.dark_300));
+        textViewVal.setText(getString(R.string.tktext));
         textView500.setText(getText(R.string._500tk).toString());
         textView100.setText(getText(R.string._100tk).toString());
         textView50.setText(getText(R.string._50tk).toString());
