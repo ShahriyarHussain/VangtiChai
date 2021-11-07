@@ -13,12 +13,13 @@
         android:layout_marginTop="@dimen/marginTopRowBtn"
         android:layout_marginEnd="@dimen/landMarginRight"
         android:backgroundTint="@color/yellow_200"
-        android:textColor="@color/dark_200"
         android:text="@string/_1"
+        android:textColor="@color/dark_200"
         android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn5"
         app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btn2"
@@ -27,8 +28,8 @@
         android:layout_marginTop="@dimen/marginTopRowBtn"
         android:layout_marginEnd="@dimen/landMarginRight"
         android:backgroundTint="@color/yellow_200"
-        android:textColor="@color/dark_200"
         android:text="@string/_2"
+        android:textColor="@color/dark_200"
         android:textSize="@dimen/txtSize"
         app:layout_constraintBottom_toTopOf="@+id/btn6"
         app:layout_constraintEnd_toStartOf="@+id/btn3"
@@ -120,9 +121,10 @@
         android:layout_height="@dimen/btnHeight"
         android:layout_marginEnd="@dimen/landMarginRight"
         android:backgroundTint="@color/yellow_200"
-        android:textColor="@color/dark_200"
         android:text="@string/_9"
+        android:textColor="@color/dark_200"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn8" />
 
@@ -132,9 +134,10 @@
         android:layout_height="@dimen/btnHeight"
         android:layout_marginEnd="@dimen/landMarginRight"
         android:backgroundTint="@color/yellow_200"
-        android:textColor="@color/dark_200"
         android:text="@string/_0"
+        android:textColor="@color/dark_200"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn9"
         app:layout_constraintTop_toBottomOf="@+id/btn7" />
 
@@ -144,9 +147,10 @@
         android:layout_height="@dimen/btnHeight"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/yellow_200"
-        android:textColor="@color/dark_200"
         android:text="@string/clear"
+        android:textColor="@color/dark_200"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn0"
         app:layout_constraintTop_toBottomOf="@+id/btn5" />
 
@@ -198,9 +202,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="@dimen/landMarginTop"
-        android:textColor="@color/dark_300"
         android:text="@string/_20tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text50" />
 
@@ -253,9 +258,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="114dp"
         android:layout_marginTop="@dimen/landMarginTop"
-        android:textColor="@color/dark_300"
         android:text="@string/_1tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/text20"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 

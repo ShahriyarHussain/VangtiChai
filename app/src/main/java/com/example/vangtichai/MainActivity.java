@@ -25,10 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setEntities();
 
         if (savedInstanceState != null) {
-            String savedVal = savedInstanceState.getString(STATE_VAL);
-            currentVal = savedVal;
+            currentVal = savedInstanceState.getString(STATE_VAL);
             calculateChange();
-            textViewVal.setText(getString(R.string.tktext).concat(savedVal));
+            textViewVal.setText(getString(R.string.tktext).concat(currentVal));
         }
 
         btn1.setOnClickListener(v -> addNumber("1"));
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addNumber(String number) {
+        if (number.equals("0") && currentVal.length() == 0) return;
         currentVal = currentVal.concat(number);
         this.textViewVal.setText(getString(R.string.tktext).concat(currentVal));
         calculateChange();

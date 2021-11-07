@@ -155,9 +155,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/firstTxtMarginTop"
-        android:textColor="@color/dark_300"
         android:text="@string/_500tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text100"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -167,9 +168,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
         android:text="@string/_100tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text500" />
 
@@ -179,9 +181,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
         android:text="@string/_50tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text100" />
 
@@ -192,9 +195,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
         android:text="@string/_20tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text50" />
 
@@ -204,9 +208,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
         android:text="@string/_10tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text20" />
 
@@ -216,9 +221,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
         android:text="@string/_5tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text10" />
 
@@ -228,9 +234,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
         android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
         android:text="@string/_2tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/text1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text5" />
 
@@ -239,10 +246,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/txtViewMarginLeft"
-        android:layout_marginTop="@dimen/txtTopMargin"
-        android:textColor="@color/dark_300"
+        android:layout_marginTop="32dp"
         android:text="@string/_1tk"
+        android:textColor="@color/dark_300"
         android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
