@@ -33,17 +33,10 @@ public class MainActivity extends AppCompatActivity {
             textViewVal.setText(getString(R.string.tktext).concat(currentVal));
         }
 
-        btn1.setOnClickListener(this::addNumber);
-        btn2.setOnClickListener(this::addNumber);
-        btn3.setOnClickListener(this::addNumber);
-        btn4.setOnClickListener(this::addNumber);
-        btn5.setOnClickListener(this::addNumber);
-        btn6.setOnClickListener(this::addNumber);
-        btn7.setOnClickListener(this::addNumber);
-        btn8.setOnClickListener(this::addNumber);
-        btn9.setOnClickListener(this::addNumber);
-        btn0.setOnClickListener(this::addNumber);
-        btnClr.setOnClickListener(this::addNumber);
+        for (Button btn : new Button[]{
+                btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnClr
+        }) btn.setOnClickListener(this::addNumber);
+
     }
 
     @Override
@@ -56,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         String number = ((Button)view).getText().toString();
         if (number.equals("CLEAR")) {
             tapCounter = 0;
-            currentVal = "";
             reset();
             return;
         }
@@ -102,12 +94,10 @@ public class MainActivity extends AppCompatActivity {
         amount %= 2;
         textView1.setText(String.format(Locale.ENGLISH,"%s%d",
                 getText(R.string._1tk).toString(), amount));
-
     }
 
     private void setEntities() {
         currentVal = "";
-
         this.btn0 = findViewById(R.id.btn0); this.btn1 = findViewById(R.id.btn1);
         this.btn2 = findViewById(R.id.btn2); this.btn3 = findViewById(R.id.btn3);
         this.btn4 = findViewById(R.id.btn4); this.btn5 = findViewById(R.id.btn5);
@@ -125,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void reset() {
+        this.currentVal = "";
         textViewVal.setBackgroundColor(getResources().getColor(R.color.white));
         textViewVal.setTextColor(getResources().getColor(R.color.dark_300));
         textViewVal.setText(getString(R.string.tktext));
