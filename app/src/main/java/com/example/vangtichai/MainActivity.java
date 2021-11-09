@@ -1,19 +1,20 @@
 package com.example.vangtichai;
 
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnClr;
     private TextView textViewVal, textView1, textView2, textView5, textView10,
             textView20, textView50, textView100, textView500;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String STATE_VAL = "currentVal";
     private int tapCounter = 0;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +35,9 @@ public class MainActivity extends AppCompatActivity {
             textViewVal.setText(getString(R.string.tktext).concat(currentVal));
         }
 
-        for (Button btn : new Button[]{
-                btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnClr
-        }) btn.setOnClickListener(this::addNumber);
-
+        List<Button> btnList = Arrays.asList(
+                btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnClr);
+        btnList.forEach(btn -> btn.setOnClickListener(this::addNumber));
     }
 
     @Override
