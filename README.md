@@ -1,5 +1,6 @@
 
 # VangtiChai
+An app where it shows the changes for a given amount
 CSE489 (Android Development) Assignment 1
 ## This app is tested on, works and shows layout properly on the following devices:
 ### Smartphones (Portrait & Landscape)
